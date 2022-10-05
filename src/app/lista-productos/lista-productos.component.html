@@ -1,0 +1,66 @@
+<p>Reporte de Ventas</p>
+<p>Lista de productos selecionados</p>
+<p> Lista de productos del cliente 1 </p>
+      <div class="row"> 
+          <div class="col-3" >
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Imagen</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Detalles</th>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col-2" >Acciones </th>
+                  </tr>
+                </thead>
+                <tbody >
+                  <tr *ngFor="let prod of productos,index as i">
+                    <th scope="row">{{ i }} <img [src]="prod.imagen" alt="imagen"></th>
+                    <td>{{ prod.id }}</td>
+                    <td>{{ prod.detalles }}</td>
+                    <td>{{ prod.nombre }}</td>
+                    <td>{{ prod.precio }}</td>
+                    <th scope="col"><button>Ver</button><th>
+                        <th scope="col"><button (click)="eliminarProducto(i)">eliminar</button></th>
+                  </tr>
+              </table>
+<p> Lista de productos del cliente 2 </p>
+     <div class="col-3" *ngFor="let prod of productos2,index as i">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                <th scope="col">Imagen</th>
+                <th scope="col">ID</th>
+                <th scope="col">Detalles</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Precio</th>
+                <th scope="col-2" >Acciones </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <th scope="row">{{ i }} <img [src]="prod.imagen" alt="imagen"></th>
+                <td>{{ prod.id }}</td>
+                <td>{{ prod.detalles }}</td>
+                <td>{{ prod.nombre }}</td>
+                <td>{{ prod.precio }}</td>
+                <th scope="col"><button>Ver</button><th>
+                    <th scope="col"><button (click)="eliminarProducto(i)">eliminar</button></th>
+                </tr>
+            </table> 
+        </div>
+        
+        
+        
+        
+
+
+
+
+
+    
+
+
+
+
